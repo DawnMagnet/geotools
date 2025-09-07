@@ -1,0 +1,31 @@
+
+[project]
+name = "geotools"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [{ name = "DawnMagnet", email = "axccjqh@qq.com" }]
+requires-python = ">=3.11"
+dependencies = [
+    "gdal>=3.11.3",
+    "numpy>=2.2.6",
+    "opencv-python-headless>=4.12.0.88",
+    "pillow>=11.3.0",
+    "typer>=0.17.4",
+]
+
+[project.scripts]
+tiff2png = "geotools.cli:tiff2png_cli"
+cutiff = "geotools.cli:cutiff_cli"
+tiffinfo = "geotools.cli:tiffinfo_cli"
+
+[build-system]
+requires = ["uv_build>=0.8.6,<0.9.0"]
+build-backend = "uv_build"
+
+[[tool.uv.index]]
+url = "https://mirrors.ustc.edu.cn/pypi/simple"
+default = true
+
+[dependency-groups]
+dev = ["pex>=2.55.2"]
