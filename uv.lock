@@ -31,13 +31,14 @@ sdist = { url = "https://mirrors.ustc.edu.cn/pypi/packages/88/e8/f77e577b6d99ddf
 
 [[package]]
 name = "geotools"
-version = "0.1.0"
+version = "0.1.1"
 source = { editable = "." }
 dependencies = [
     { name = "gdal" },
     { name = "numpy" },
     { name = "opencv-python-headless" },
     { name = "pillow" },
+    { name = "rich" },
     { name = "typer" },
 ]
 
@@ -52,6 +53,7 @@ requires-dist = [
     { name = "numpy", specifier = ">=2.2.6" },
     { name = "opencv-python-headless", specifier = ">=4.12.0.88" },
     { name = "pillow", specifier = ">=11.3.0" },
+    { name = "rich", specifier = ">=14.1.0" },
     { name = "typer", specifier = ">=0.17.4" },
 ]
 
